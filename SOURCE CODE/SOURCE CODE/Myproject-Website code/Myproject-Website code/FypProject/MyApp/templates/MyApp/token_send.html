@@ -1,0 +1,29 @@
+{% extends "MyApp/primary.html" %}
+{% block content %}
+
+
+<form action="login" method="POST">
+    {% csrf_token %}
+<div class="login">
+<table border="0">
+
+<body>
+
+    <div id="login">
+        {% for message in messages %}
+        <div class="alert alert-info text-center"> {{message}} 
+        </div>
+    {% endfor %}
+        <h3 class="text-center text-white pt-5">We have Sent an Email to you <br> Please Verify</h3>
+        </div>
+    </div>
+
+</body>
+</table>
+
+<div>
+
+</div>
+
+
+{% endblock content %}

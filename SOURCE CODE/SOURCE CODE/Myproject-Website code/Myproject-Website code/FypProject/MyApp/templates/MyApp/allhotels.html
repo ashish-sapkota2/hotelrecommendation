@@ -1,0 +1,36 @@
+{% extends "MyApp/primary.html" %}
+{% block content %}
+
+
+
+
+<div class="container-fluid text-dark ">
+    <div class="container border-top mt-1 mw-100">
+        <div class="row justify-content-center">
+          <div class="container-fluid">
+            <h3>All Hotels</h3>
+                      </div>
+              {% for r in types %}
+              <div class="card c_view shadow" style="width: 12rem; height: 18rem;">
+                 <img class="card-img-top c_img border-bottom rounded-0 mb-0" src="{{ MEDIA_URL }}{{ r.image }}" alt="Card image cap" style="width: 12rem; height: 10rem;">
+                 <div class="card-body p-0">
+                     <h5 class="card-title c_name float-left w-100" style="color:#000; font-size:16px;"><small>{{ r.name }}</small></h5>
+                      <div class="container-fluid">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'hotel_info' r.id %}" class="btn btn-primary mx-1">Show more</a>
+                        {% else %}
+                      <a class="btn btn-primary mx-1" href="{% url 'login_try' %}">View More</a>{% endif %}
+                      </div>
+
+                 </div>
+
+              </div>
+              {% endfor %}
+           </div>
+    </div>
+
+</div>
+
+
+
+{% endblock content %}

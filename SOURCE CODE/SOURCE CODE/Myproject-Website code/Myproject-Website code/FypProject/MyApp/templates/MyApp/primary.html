@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="{% static 'CSS/myStyle.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="media/logo/logo.png" type="image/x-icon">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="background">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'home' %}">HotelZz</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}" >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'types' %}" >All Hotels<span class="sr-only">(current)</span></a>
+      </li>
+	{% if user.is_authenticated %}
+				<li class="nav-link text-capitalize"> {{user.username}}</li>
+				<li><a class="nav-link" href="{% url 'logout' %}" id="logout">Logout</a></li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/favourites">Favourites<span class="sr-only">(current)</span></a>
+        </li>
+     		{% else %}
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login_try' %}" >Login <span class="sr-only">(current)</span></a>
+      </li>
+
+	<li class="nav-item">
+       	 <a class="nav-link" href="{% url 'register' %}" >Register <span class="sr-only">(current)</span></a>
+      		</li>
+
+
+    </ul>
+
+{% endif %}
+
+    <form class="form-inline my-2 my-lg-0 " method ="GET" action =" {%url 'search' %}">
+               <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" name="q" required>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+{% block content %}
+            if you see this, something is wrong!
+          {% endblock content %}
+
+
+<div class="footer">
+  <p>© 2023 Copyright:HotelZz. All Rights Reserved.</p>
+</div>
+
+</body>
+
+
+</html>

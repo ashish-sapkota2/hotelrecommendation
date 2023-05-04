@@ -1,0 +1,27 @@
+{% extends "MyApp/primary.html" %}
+{% block content %}
+
+
+<head>
+    <title>All Hotels</title>
+    </head>
+<div class="container-fluid text-dark ">
+    <div class="container border-top mt-1 mw-100">
+        <div class="row justify-content-center">
+          <div class="container-fluid">
+            <h3>All Hotels</h3>
+                      </div>
+              {% for r in object %}
+              <div class="card c_view shadow Tname" style="width: 20rem; height: 5rem;" onclick="location.href='{% url 'hotel_types' r.id %}'">
+                 <div class="card-body p-0">
+                     <h5 class="card-title c_name float-left w-100" style="color:#000; font-size:25px;"><small>{{ r.Rname  }}</small></h5>
+
+                 </div>
+
+              </div>
+              {% endfor %}
+           </div>
+    </div>
+
+</div>
+{% endblock content %}

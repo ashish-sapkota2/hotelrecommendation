@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
+
+* {
+ margin: 0;
+ padding: 0;
+ font-family: verdana;
+
+}
+
+
+.background{
+  background-color: #7ee8fa;
+  background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+  /* fallback for old browsers */
+  font-family:"'Exo 2', Helvetica Neue, Helvetica, Arial,sans-serif";
+  position: relative;
+  min-height: 100vh;
+  width:100%;
+  padding-bottom: 2.5rem;
+  color:black;
+  display:flex;
+  flex-direction: column;
+}
+
+
+.bg-light {
+    background-color: #f8f9fa!important;
+    background-color: #f1dfd1;
+    background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+}
+
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+/*--------------Login/register-----------------*/
+
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+/*--hotel heading--*/
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+    margin-left: -300px;
+}
+
+/*-Comment box */
+textarea {
+    overflow: auto;
+    width: 100%;
+    resize: vertical;
+    border-radius: 20px;
+}
+
+
+
+/*-review-*/
+.blockquote {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    margin-left: 2rem;
+}
+/*-----types---*/
+
+
+.Tname:hover{
+    background-color: #B2FEFA;
+}
+
+/*
+.centered a{
+  position: absolute;
+  top: 40%;
+  left: 13%;
+  text-decoration: none;
+  color: #F0F8FF;
+  transform: translate(-50%, -50%);
+}
+*/
+
+.homework h1{
+text-align: center;
+
+}
+/*-----MyRestro heading---*/
+.navbar-light .navbar-brand {
+     color: #15e538;
+}
+
+
+
+
+.navbar-brand {
+
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 2.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+
+/*-----allhotels---*/
+
+
+.c_list{
+    padding:20px;
+    width:90%;
+    margin:0 auto;
+
+}
+.carousel-item > img {
+    width:100%;
+    height:80vh;
+}
+.carousel{
+    height: 80vh;
+}
+
+.c_view p{
+     font-size: 18px;
+     height: 100px;
+}
+.c_view {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    margin:15px;
+    overflow:hidden;
+    }
+
+.c_name{
+        height:40px;
+    }
+
+.c_img{
+    width:100%;
+    height: 250px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.h5, h5 {
+    text-align: center;
+    font-size: 15px;
+}
+
+/*----navbar----*/
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: auto;
+}
+
+/*---footer--*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  color: black;
+  text-align: center;
+  background-color: #ffbd77;
+  background-image: linear-gradient(319deg, #ffbd77 0%, #f0f4a4 37%, #acfcd9 100%);
+
+}

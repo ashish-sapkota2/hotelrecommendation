@@ -1,0 +1,72 @@
+{% extends "MyApp/primary.html" %}
+{% block content %}
+
+
+<head>
+<title>User Registration</title>
+</head>
+
+
+<form action="register" method="POST">
+    {% csrf_token %}
+<div class="register">
+<table border="0">
+
+
+    <div id="register">
+        <h3 class="text-center text-white pt-5">User Registration</h3>
+        {% for message in messages %}
+        <div class="alert alert-info text-center"> {{message}} 
+        </div>
+        {% endfor %}
+        <div class="container">
+            <div id="" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+
+                            <div class="form-group">
+                                <label for="username" class="text-info">Username:</label><br>
+                                <input id="username" maxlength="50" name="username" type="text" class="form-control" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="fname" class="text-info">First_Name:</label><br>
+                                <input id="fname" maxlength="50" name="first_name" type="text" class="form-control" required/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lname" class="text-info">Last_Name:</label><br>
+                                <input id="lname" maxlength="50" name="last_name" type="text" class="form-control" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Email:</label><br>
+                                <input id="email" maxlength="50" name="email" type="email" class="form-control" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input id="password" maxlength="50" name="password" type="password" class="form-control"  required/>
+                            </div>
+                            <div class="form-group">
+                               <input name="Submit" type="Submit" value="Submit"  class="btn btn-info btn-md">
+                            </div>
+                            <div id="register-link" class="text-center">
+                                 <p> Already have an account? <a href="login" >Click Here to Login</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</table>
+<div>
+
+
+</div>
+
+
+</div>
+</form>
+
+{% endblock content %}

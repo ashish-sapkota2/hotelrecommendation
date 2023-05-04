@@ -1,0 +1,32 @@
+{% extends "MyApp/primary.html" %}
+{% block content %}
+
+
+<form action="login" method="POST">
+    {% csrf_token %}
+<div class="login">
+<table border="0">
+
+<body>
+
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Error!</h3>
+        <h4 class="text-center text-white pt-5"><a href="/">Click here to go back</a></h4>
+        </div>
+    </div>
+
+</body>
+</table>
+
+<div>
+
+    {% for message in messages %}
+    <h3> {{message}} </h3>
+    {% endfor %}
+
+</div>
+
+
+{% endblock content %}
+
+
