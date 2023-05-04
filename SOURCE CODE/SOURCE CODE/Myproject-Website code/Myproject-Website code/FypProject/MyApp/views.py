@@ -34,8 +34,8 @@ import h5py
 # loaded_model = tf.keras.models.load_model(r'‪F:\Program\Python\sentiment.h5')
 from keras.models import load_model
 
-model = load_model('D:/SOURCE CODE/SOURCE CODE/Aimodel/Aimodel/sentiment.h5')
-loaded_model1 = joblib.load('D:/SOURCE CODE/SOURCE CODE/Aimodel/Aimodel/tokenizer.pkl')
+model = load_model('D:/hotelrecommendation/SOURCE CODE/SOURCE CODE/Aimodel/Aimodel/sentiment.h5')
+loaded_model1 = joblib.load('D:/hotelrecommendation/SOURCE CODE/SOURCE CODE/Aimodel/Aimodel/tokenizer.pkl')
 
 
 
